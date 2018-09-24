@@ -48,6 +48,8 @@ public class Question1 {
 			while((currentLine = br.readLine()) != null){//while there is content on the current line
 				String key=currentLine.substring(0, currentLine.indexOf('¨C')).trim();
 				List<String> l;
+				
+				//read word as key in map
 				if(!m.containsKey(key)) {
 					l = new ArrayList<String>();
 					
@@ -57,6 +59,7 @@ public class Question1 {
 					
 				}
 				
+				//read content, store in a list in case there are more than 1 explanation
 				currentLine= currentLine.substring(currentLine.indexOf('¨C')+1);
 				while(currentLine.contains(",")) {
 					l.add(currentLine.substring(0, currentLine.indexOf(',')));
@@ -66,9 +69,9 @@ public class Question1 {
 					
 				m.put(key,new ArrayList<String>(l));
 				l.clear();
-				 // print the current line
 			}
 			
+			//print out dictionary in correct format
 			for(String k:m.keySet()) {
 				System.out.println(k+":");
 				List<String> temp=m.get(k);
