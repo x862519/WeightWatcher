@@ -2,6 +2,7 @@
 
 All 3 questions are written in Java. They are under src\Question3. Directory file for question1 is under \new\Dictionary.txt.
 
+
 Question 1:
 
   a. doesFileExist(String path) returns true if file is found. Otherwise, return false.
@@ -10,6 +11,7 @@ Question 1:
   
   
 Question 2:
+
   a. I put all verificaton in main section. 
   
   b. I tested it with FireFox.
